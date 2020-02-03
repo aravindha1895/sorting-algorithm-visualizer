@@ -1,0 +1,28 @@
+<div class="header">
+    Algo Visualizer
+    <small id="slider">
+        Array size:
+        <mat-slider thumbLabel min="1" [max]="arrayLength" step="1" [value]="arrayLength"
+            (change)="changeArraySize($event)"></mat-slider>
+    </small>
+    <small id="slider">
+        Delay(ms):
+        <mat-slider thumbLabel min="8" max="100" step="10" [value]="animationSpeed" (change)="changeSpeed($event)">
+        </mat-slider>
+    </small>
+    <mat-button-toggle-group value="merge" appearance="legacy" name="fontStyle" aria-label="Font Style"
+        style="margin-left:20px">
+        <mat-button-toggle value="merge" (change)="onToggleChanged($event)">Merge sort</mat-button-toggle>
+        <mat-button-toggle value="bubble" (change)="onToggleChanged($event)">Bubble sort</mat-button-toggle>
+    </mat-button-toggle-group>
+    <button mat-button color="accent" (click)="sortFunction()"
+        style="float:right;padding-top: 5px;margin-top:5px">Start</button>
+    <button mat-button color="primary" (click)="ngOnInit()"
+        style="float:right;padding-top: 5px;margin-top:5px">Reset</button>
+</div>
+<div class="main">
+    <div className="array-container">
+        <div *ngFor="let item of inputArr; let i = index" class="array-bar" id="arrayBar{{i}}"
+            [ngStyle]="{backgroundColor: 'olivedrab', height: item+'px'}"></div>
+    </div>
+</div>

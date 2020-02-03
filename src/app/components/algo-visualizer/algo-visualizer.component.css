@@ -1,0 +1,33 @@
+.main {
+  margin: 10px;
+}
+.array-container {
+  position: absolute;
+  left: 100px;
+  text-align: center;
+  /* top: 100px; */
+}
+
+.array-bar {
+  width: 10px;
+  display: inline-block;
+  margin: 0 1px;
+  color: crimson;
+}
+.header {
+  background-color: #263238;
+  height: 45px;
+  padding: 3px 40px 8px 16px;
+  color: white;
+  margin-top: 0;
+}
+
+mat-slider {
+  width: 200px;
+  margin-top: 13px;
+}
+#slider {
+  margin-left: 20px;
+  font-size: 10px;
+  color: grey;
+}
